@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reciclaje</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>¿Por qué reciclar?</h1>
+    <nav>
+        <a href="{{ url_for('index') }}">Inicio</a> |
+        <a href="{{ url_for('tipos') }}">Tipos de Residuos</a> |
+        <a href="{{ url_for('reciclaje') }}">Reciclaje</a>
+    </nav>
+    <p>El reciclaje ayuda a reducir la contaminación y el consumo de recursos naturales.</p>
+    <img src="{{ url_for('static', filename='reciclaje.jpeg') }}" alt="Reciclaje" width="300">
+</body>
+</html>

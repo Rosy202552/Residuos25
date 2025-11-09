@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tipos de Residuos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Tipos de Residuos</h1>
+    <nav>
+        <a href="{{ url_for('index') }}">Inicio</a> |
+        <a href="{{ url_for('tipos') }}">Tipos de Residuos</a> |
+        <a href="{{ url_for('reciclaje') }}">Reciclaje</a>
+    </nav>
+    <ul>
+        <li>Orgánicos</li>
+        <li>Inorgánicos</li>
+        <li>Peligrosos</li>
+    </ul>
+    <img src="{{ url_for('static', filename='basura.jpeg') }}" alt="Basura" width="300">
+</body>
+</html>

@@ -1,0 +1,13 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background-color: #e6f9e6;
+    font-size: 1.5em; /* Aumenta el tamaño base del texto */
+}
+h1 {
+    color: #2e7d32;
+    font-size: 3em;   /* Título mucho más grande */
+}
+p, nav ul li a {
+    font-size: 1.3em; /* Texto y enlaces más grandes */
+}

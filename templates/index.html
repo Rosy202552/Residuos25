@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página de Inicio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        .container {
+            display: flex;
+            align-items: flex-start;
+        }
+        .imagen-derecha {
+            margin-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1>Bienvenido a Proyecto Residuos</h1>
+            <p>Esta es la página principal de tu sitio.</p>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('tipos') }}">Tipos de residuos</a></li>
+                    <li><a href="{{ url_for('reciclaje') }}">Reciclaje</a></li>
+                    <li><a href="{{ url_for('denuncias') }}">Registrar Denuncias</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="imagen-derecha">
+            <img src="{{ url_for('static', filename='botes.jpeg') }}" alt="Bote" width="700">
+        </div>
+    </div>
+</body>
+</html>
