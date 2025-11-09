@@ -5,6 +5,10 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///denuncias.db'
 db = SQLAlchemy(app)
 
+# Crear tablas al importar (funciona con gunicorn)
+with app.app_context():
+    db.create_all()
+
 class Denuncia(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     nombre = db.Column(db.String(100), nullable=False)
@@ -55,6 +59,4 @@ def reciclaje():
     return render_template('reciclaje.html')
 
 if __name__ == '__main__':
-    with app.app_context():
-        db.create_all()
     app.run(debug=True)
